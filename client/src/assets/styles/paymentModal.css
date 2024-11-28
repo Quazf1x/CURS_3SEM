@@ -1,0 +1,117 @@
+.payment-modal-bg {
+  align-items: center;
+  background-color: #000000c2;
+  display: flex;
+  justify-content: center;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.payment-modal {
+  background-color: var(--bg);
+  border-radius: 2rem;
+  display: flex;
+
+  padding: 2rem;
+  flex-direction: column;
+  height: 80%;
+  width: clamp(400px, 33%, 600px);
+  box-shadow: 0 0 55px var(--lighter-bg);
+  z-index: 11;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-input-label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.payment-input {
+  border: 2px solid var(--lighter-bg);
+  border-radius: 0.25rem;
+  color: var(--greyish);
+  height: 3rem;
+  padding: 0.25rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--lighter-bg);
+  transition: all 0.2s ease-in-out;
+}
+
+.payment-input:focus {
+  border: 2px solid var(--primary);
+  outline: none;
+}
+
+.payment-submit-btn,
+.payment-cancel-btn,
+.payment-afterword-button {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.payment-submit-btn {
+  background-color: var(--primary);
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--white);
+  padding: 1rem;
+  font-size: 1.3rem;
+
+  margin-bottom: 1rem;
+}
+
+.payment-submit-btn:hover,
+.payment-cancel-btn:hover,
+.payment-afterword-button:hover {
+  transform: translateY(2px);
+}
+
+.payment-cancel-btn {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.payment-cancel-btn:active,
+.payment-afterword-button:active {
+  transform: scale(0.95);
+}
+
+.payment-afterword-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.payment-afterword-wrapper > h1,
+.payment-afterword-wrapper > p {
+  text-align: center;
+  margin: 0.25rem 0;
+}
+
+.payment-afterword-button {
+  background-color: transparent;
+  border: 3px solid var(--primary);
+  color: var(--white);
+  padding: 0.5rem 0;
+  margin-top: 2rem;
+  width: 100%;
+}

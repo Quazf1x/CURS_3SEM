@@ -1,0 +1,83 @@
+.gamecard {
+  border-radius: 0.25rem;
+  color: var(--white);
+  cursor: pointer;
+  position: relative;
+
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.gamecard:hover {
+  transform: scale(1.025);
+}
+
+.gamecard > img {
+  background-color: var(--lighter-bg);
+  display: flex;
+  text-align: center;
+  line-height: 400px;
+  border-radius: inherit;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.gamecard-info-wrapper {
+  background-color: #ffffff14;
+  box-shadow: 0 -10px 10px #00000054;
+  backdrop-filter: blur(5px);
+  display: grid;
+  flex-direction: column;
+
+  position: absolute;
+  bottom: 0;
+
+  padding: 1rem;
+  height: 25%;
+  width: 100%;
+}
+
+.gamecard-info-wrapper > div {
+  align-self: flex-end;
+  align-items: end;
+  display: flex;
+  justify-content: space-between;
+  height: 2rem;
+  width: 100%;
+}
+
+.gamecard-name {
+  font-weight: 500;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.gamecard-name,
+.gamecard-price {
+  text-shadow: 1.2px 1px 2px black;
+}
+
+.gamecard-add-btn {
+  border: none;
+  background-color: var(--white);
+  box-shadow: 0 0 5px 5px #00000037;
+  cursor: pointer;
+  height: 100%;
+  padding: 0 1rem;
+  transition: all 0.15s ease-in-out;
+}
+
+.gamecard-add-btn:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.gamecard-add-btn:active {
+  background-color: var(--lighter-primary);
+}
+
+.gamecard-add-btn-added {
+  background-color: var(--primary);
+  color: var(--white);
+}

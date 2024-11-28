@@ -1,0 +1,160 @@
+.checkout-banner {
+  display: grid;
+  gap: 2rem;
+  grid-template: 3rem 11rem 1fr / 1fr 30rem;
+  margin: 2.5svw;
+  min-height: fit-content;
+  padding-bottom: 4rem;
+}
+
+.checkout-banner > h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.order-list,
+.confirm-order-wrapper {
+  background-color: var(--dark-grey);
+  border-radius: 1rem;
+}
+
+.order-list {
+  min-height: 30rem;
+  grid-row: 2/4;
+  list-style: none;
+}
+
+.confirm-order-wrapper {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  display: flex;
+  padding: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.confirm-order-wrapper > h2 {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.confirm-order-wrapper > button {
+  background-color: VAR(--primary);
+  border: none;
+  border-radius: 1rem;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  width: 100%;
+  height: 4rem;
+  transition:
+    background-color 0.2s ease-in-out,
+    transform 0.15s;
+}
+
+.confirm-order-wrapper > button:hover {
+  background-color: var(--lighter-primary);
+}
+
+.confirm-order-wrapper > button:active {
+  transform: scale(0.95);
+}
+
+.ordered-game {
+  align-items: center;
+  display: grid;
+  grid-template: 1fr / 2fr 2fr 1fr;
+  padding: 0 2rem;
+  height: 3rem;
+}
+
+.ordered-game:nth-child(even) {
+  background-color: var(--lighter-bg);
+}
+
+.ordered-game > button {
+  background-color: transparent;
+  border: none;
+  color: var(--primary);
+  cursor: pointer;
+  font-size: 1.2rem;
+  justify-self: flex-end;
+  transition: all 0.2s ease-in-out;
+}
+
+.ordered-game > button:hover {
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.order-price-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.empty-cart {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  height: 100%;
+}
+.checkout-slide-left {
+  animation: checkout-slide-left var(--slide-anim-duration) ease-out;
+}
+
+.checkout-slide-right {
+  animation: checkout-slide-right var(--slide-anim-duration) ease-out;
+}
+
+@keyframes checkout-slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes checkout-slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .checkout-banner {
+    grid-template: 4rem 11rem 1fr / 1fr;
+  }
+
+  .checkout-banner > h1 {
+    margin: 1rem 0;
+  }
+
+  .empty-cart {
+    text-align: center;
+  }
+
+  .confirm-order-wrapper {
+    grid-column: unset;
+  }
+
+  .order-list {
+    grid-row: unset;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+
+  .ordered-game {
+    padding: 0 1rem;
+  }
+}

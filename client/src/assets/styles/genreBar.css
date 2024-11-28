@@ -1,0 +1,39 @@
+.genre-bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 4svh 0;
+}
+
+#genre-heading {
+  padding: 0 2svw;
+  margin-bottom: 1rem;
+}
+
+.genre-button-wrapper {
+  display: block;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.genre-button-wrapper:hover {
+  background-color: var(--popup-hover-color);
+}
+
+.genre-button-link {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.genre-button-link > p {
+  padding: 1rem 2rem;
+  transition: all 0.25s;
+}
+
+.genre-arrow {
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+}
+
+.chosen-genre {
+  background-color: var(--lighter-bg);
+}

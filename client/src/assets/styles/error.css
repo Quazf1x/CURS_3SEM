@@ -1,0 +1,15 @@
+.error-container {
+  align-items: center;
+  background-color: var(--lighter-bg);
+  border-radius: inherit;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100svh;
+  width: 100%;
+}
+
+.error-container > h2,
+.error-container > p {
+  margin: 0.5rem 0;
+}
