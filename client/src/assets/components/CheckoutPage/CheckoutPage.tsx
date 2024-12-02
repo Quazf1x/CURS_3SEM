@@ -13,7 +13,7 @@ const CheckoutPage = () => {
   const [isPayment, setPayment] = useState(false);
 
   const togglePaymentModal = () => {
-    if (cartList.length > 0) setPayment(!isPayment);
+    setPayment(!isPayment);
   };
 
   const ordersContent =
@@ -64,7 +64,13 @@ const CheckoutPage = () => {
           <h2>
             Total: <span>${totalPrice}</span>
           </h2>
-          <button onClick={togglePaymentModal}>Buy</button>
+          <button
+            onClick={() => {
+              if (cartList.length > 0) togglePaymentModal();
+            }}
+          >
+            Buy
+          </button>
         </div>
       </main>
     </motion.div>

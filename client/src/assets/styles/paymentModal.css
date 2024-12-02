@@ -20,6 +20,7 @@
   padding: 2rem;
   flex-direction: column;
   height: 80%;
+  min-height: fit-content;
   width: clamp(400px, 33%, 600px);
   box-shadow: 0 0 55px var(--lighter-bg);
   z-index: 11;
